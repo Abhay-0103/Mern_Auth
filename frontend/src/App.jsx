@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+
 import { Routes, Route } from "react-router-dom"; // no BrowserRouter here
 import FloatingShape from "./components/FloatingShape";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 flex items-center justify-center relative overflow-hidden">
