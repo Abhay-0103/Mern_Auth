@@ -43,7 +43,7 @@ const EmailVerificationPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const verificationCode = code.join("");
-    alert(`Verification Code Submitted : ${verificationCode}`);
+    console.log(`Verification Code Submitted : ${verificationCode}`);
   };
 
   // Auto Submit after all filled
