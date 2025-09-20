@@ -1,6 +1,6 @@
-
 import { Routes, Route } from "react-router-dom"; // no BrowserRouter here
 import FloatingShape from "./components/FloatingShape";
+
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import EmailVerificationPage from "./pages/EmailVerificationPage";
