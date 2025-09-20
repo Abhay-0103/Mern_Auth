@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom"; // no BrowserRouter here
 import FloatingShape from "./components/FloatingShape";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import EmailVerificationPage from "./pages/EmailVerificationPage";
+
 
 function App() {
 
@@ -34,6 +36,7 @@ function App() {
         <Route path="/" element={<h1 className="text-white text-4xl">Home</h1>} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/verify-email" element={<EmailVerificationPage />} />
       </Routes>
     </div>
   );
