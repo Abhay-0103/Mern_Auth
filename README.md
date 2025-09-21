@@ -17,10 +17,7 @@ A MERN stack (MongoDB, Express, React, Node.js) based authentication system. Pro
 - [Usage](#usage)  
 - [API Endpoints](#api-endpoints)  
 - [Folder Structure](#folder-structure)  
-- [Screenshots / Demo](#screenshots-demo) *(optional)*  
 - [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)
 
 ---
 
@@ -46,13 +43,14 @@ A MERN stack (MongoDB, Express, React, Node.js) based authentication system. Pro
 ---
 
 ## Project Structure
-
+```
 Mern-Auth/
 ├── backend/ # Server, routes, controllers, models
 ├── frontend/ # React application
 ├── .env.local # Local environment vars
 ├── package.json
 └── README.md
+```
 
 ---
 
@@ -97,7 +95,7 @@ If the frontend requires API base URLs or similar, add them in appropriate .env 
  # Running the App
 In two separate terminals:
 
-bash
+```bash
 # Terminal 1: start backend
 cd backend
 npm run start
@@ -107,23 +105,25 @@ npm run start
 cd frontend
 npm start
 The React app will usually run on http://localhost:3000 and backend on some port (e.g. 5000).
+```
 
 # API Endpoints
-Method	Endpoint	Purpose	Protected?
-POST	/api/auth/register	Register a new user	No
-POST	/api/auth/login	User login, returns JWT	No
-GET	/api/auth/user	Fetch current user info	Yes (JWT required)
+- Method	Endpoint	Purpose	Protected?
+- POST	/api/auth/register	Register a new user	No
+- POST	/api/auth/login	User login, returns JWT	No
+- GET	/api/auth/user	Fetch current user info	Yes (JWT required)
 
-(Adjust according to actual routes in the code)
+- (Adjust according to actual routes in the code)
 
-Usage
-On the frontend, go to the Register page → sign up
+# Usage
 
-Then login → receive token stored (e.g. localStorage)
+- On the frontend, go to the Register page → sign up
 
-Use token to access protected routes or user info
+- Then login → receive token stored (e.g. localStorage)
 
-To test email features, use Mailtrap dashboard
+- Use token to access protected routes or user info
+
+- To test email features, use Mailtrap dashboard
 
 # Folder Structure (Detailed)
 ```arduino
@@ -145,16 +145,16 @@ frontend/
 ```
 # Contributing
 
-Contributions are welcome!
+- Contributions are welcome!
 
-Steps:
+# Steps:
 
-Fork the repo
+- Fork the repo
 
-Create a new branch (e.g. feature/my-feature)
+- Create a new branch (e.g. feature/my-feature)
 
-Make your changes & commit them
+- Make your changes & commit them
 
-Push to your fork and open Pull Request
+- Push to your fork and open Pull Request
 
-Please ensure code is cleaned up and includes comments where necessary.
+- Please ensure code is cleaned up and includes comments where necessary.
