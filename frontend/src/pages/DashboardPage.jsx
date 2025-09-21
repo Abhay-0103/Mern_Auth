@@ -4,8 +4,11 @@ import { useAuthStore } from "../store/authStore";
 import { formatDate } from "../utils/date";
 
 const DashboardPage = () => {
-  const { user } = useAuthStore();
+  const { user, logout } = useAuthStore();
 
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -19,7 +22,6 @@ const DashboardPage = () => {
       </h2>
 
       <div className="space-y-6">
-
         <motion.div
           className="p-4 bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +34,6 @@ const DashboardPage = () => {
           <p className="text-gray-300">Name: {user.name}</p>
           <p className="text-gray-300">Email: {user.email}</p>
         </motion.div>
-
 
         <motion.div
           className="p-4 bg-gray-800 bg-opacity-50 rounded-lg border border-gray-700"
@@ -58,6 +59,24 @@ const DashboardPage = () => {
           </p>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6 }}
+        className="mt-4"
+      >
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleLogout}
+          className="w-full py-3 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white 
+				font-bold rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700
+				 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        >
+          Logout
+        </motion.button>
+      </motion.div>
     </motion.div>
   );
 };
